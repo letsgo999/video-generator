@@ -60,4 +60,5 @@ def generate_video():
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8080))  # Cloud Run의 PORT 환경 변수를 사용하거나 기본 8080
-    app.run(host='0.0.0.0', port=port, debug=True)  # 서버를 모든 IP에서 듣게 함 (debug=True는 테스트용)
+    app.run(host='0.0.0.0', port=port)  # 서버를 모든 IP에서 듣게 함 (debug=True는 테스트용)
+
