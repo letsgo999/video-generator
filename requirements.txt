@@ -1,5 +1,6 @@
 Flask
+gunicorn 
 MoviePy
 Pillow
-gunicorn # 프로덕션용 WSGI 서버
+numpy>=1.25.0
 requests
