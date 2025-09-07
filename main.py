@@ -50,7 +50,13 @@ def generate_video():
 
             output_filename = f"output_{uuid.uuid4()}.mp4"
             output_path = os.path.join(tmpdir, output_filename)
-            final_clip.write_videofile(output_path, codec="libx264", audio_codec="aac")
+
+            final_clip.write_videofile(
+                output_path, 
+                codec="libx264", 
+                audio_codec="aac",
+                ffmpeg_params=["-preset", "fast", "-hwaccel", "cuda", "-hwaccel_output_format", "cuda"]
+            )
 
             # 4. 결과물 반환
             # 여기서는 최종 비디오를 Google Cloud Storage에 업로드하고 URL을 반환하는 로직이 필요합니다.
@@ -70,6 +76,7 @@ def health_check():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8080))  # Cloud Run의 PORT 환경 변수를 사용하거나 기본 8080
     app.run(host='0.0.0.0', port=port)  # 서버를 모든 IP에서 듣게 함 (debug=True는 테스트용)
+
 
 
 
