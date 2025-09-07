@@ -3,7 +3,7 @@ import requests
 
 # 백엔드 서버의 URL을 여기에 입력하세요.
 # Cloud Run 서비스 URL을 복사하여 붙여넣으세요.
-BACKEND_URL = "https://your-cloud-run-service-url.run.app"
+BACKEND_URL = "https://generate-video-github-999186737854.asia-northeast3.run.app"
 
 st.title("비디오 생성기")
 st.write("이미지와 오디오를 업로드하여 비디오를 생성하세요.")
