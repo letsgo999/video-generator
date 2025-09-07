@@ -27,5 +27,5 @@ COPY . .
 # 컨테이너 포트 노출
 EXPOSE 8080
 
-# 애플리케이션 실행
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app
+# Gunicorn 대신 Flask의 내장 서버로 실행
+CMD ["python3", "main.py"]
