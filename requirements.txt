@@ -1,3 +1,4 @@
-flask==2.3.2
-moviepy==1.0.3
-pillow==10.0.0
+Flask
+MoviePy
+Pillow
+gunicorn # 프로덕션용 WSGI 서버
