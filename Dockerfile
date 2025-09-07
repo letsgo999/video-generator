@@ -1,5 +1,13 @@
-# 파이썬 공식 이미지를 기반으로 합니다.
-FROM python:3.11-slim
+# CUDA(GPU) 지원용 공식 파이썬 이미지를 사용
+FROM nvidia/cuda:11.7.1-cudnn8-runtime-ubuntu20.04
+
+# 파이썬 설치
+RUN apt-get update && apt-get install -y python3 python3-pip
+
+# 작업 디렉토리 설정
+WORKDIR /app
+
+# ... 나머지 `requirements.txt` 및 ffmpeg 설치 과정은 동일 ...
 
 # 작업 디렉토리 설정
 WORKDIR /app
