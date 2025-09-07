@@ -1,5 +1,5 @@
 # 파이썬 공식 이미지를 기반으로 합니다.
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 # 작업 디렉토리 설정
 WORKDIR /app
