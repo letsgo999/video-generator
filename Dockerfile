@@ -10,6 +10,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # FFMpeg 설치
 RUN apt-get update && apt-get install -y ffmpeg
+# FFmpeg 경로를 확인하는 임시 명령어 추가
+RUN which ffmpeg
 
 # 애플리케이션 소스 코드 복사
 COPY . .
