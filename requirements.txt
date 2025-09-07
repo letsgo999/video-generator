@@ -2,3 +2,4 @@ Flask
 MoviePy
 Pillow
 gunicorn # 프로덕션용 WSGI 서버
+requests
