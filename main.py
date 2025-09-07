@@ -53,5 +53,11 @@ def generate_video():
 
             return jsonify({"status": "Video generation successful!"})
 
+    
+
     except Exception as e:
         return jsonify({"status": "An error occurred", "error": str(e)})
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 8080))  # Cloud Run의 PORT 환경 변수를 사용하거나 기본 8080
+    app.run(host='0.0.0.0', port=port, debug=True)  # 서버를 모든 IP에서 듣게 함 (debug=True는 테스트용)
